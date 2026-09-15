@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { ProfileData, ThemeColor } from '../types/portfolio';
 import { colorThemeMap } from '../data/portfolioData';
+import profileImage from '../../profile~3.jpg';
 
 interface HeroProps {
   profile: ProfileData;
@@ -89,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({ profile, activeTheme }) => {
               />
               <div className="relative h-full w-full overflow-hidden rounded-full border border-slate-700/80 bg-slate-800 shadow-2xl shadow-indigo-950/40">
                 <img
-                  src="/profile~3.jpg"
+                  src={profileImage}
                   alt={profile.name}
                   onError={(event) => {
                     event.currentTarget.src = profile.avatarUrl;

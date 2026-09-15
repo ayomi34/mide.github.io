@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight, CheckCircle2, Code2, MapPin, Sparkles } from 'lucide-react';
 import { ProfileData, ThemeColor } from '../types/portfolio';
 import { colorThemeMap } from '../data/portfolioData';
+import aboutImage from '../../ayomi.png';
 
 interface AboutSectionProps {
   profile: ProfileData;
@@ -33,7 +34,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile, activeTheme
             <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 p-2 shadow-2xl shadow-slate-300/60">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
                 <img
-                  src="/ayomi.png"
+                  src={aboutImage}
                   alt={`${profile.name} portrait`}
                   className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
                 />
